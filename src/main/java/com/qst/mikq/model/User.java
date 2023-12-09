@@ -1,9 +1,9 @@
 package com.qst.mikq.model;
 
 import com.qst.mikq.enums.Positions;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import javax.validation.constraints.*;
+
+import com.qst.mikq.enums.PrioritiesOfUser;
 import lombok.Builder;
 import lombok.Data;
 
@@ -26,10 +26,18 @@ public class User {
     @NotNull(message = "Role cannot be null")
     @NotEmpty(message = "Role cannot be empty")
     private String role;
-
-    private PositionAtWork positionAtWork;
+    @NotNull(message = "User position cannot be null")
+    private PrioritiesOfUser positionAtWork;
+    @NotNull(message = "Position cannot be null")
     private Positions position;
+    @NotNull(message = "Level cannot be null")
+    @Min(value = 0, message = "Level cannot be less than zero")
+    @Max(value = 100, message = "Level cannot be more than 100")
     private Integer level;
+    @NotNull(message = "Experience cannot be null")
+    @Min(value = 0, message = "Experience cannot be less than zero")
+    @Max(value = 1000, message = "Experience cannot be more than 1000")
     private Double experience;
+
     private Long teamUuid;
 }
