@@ -23,7 +23,10 @@ public class User {
     private String password;
     @Size(max = 200, message = "Description cannot be more than 200")
     private String description;
+    @NotNull(message = "Role cannot be null")
+    @NotEmpty(message = "Role cannot be empty")
     private String role;
+
     private PositionAtWork positionAtWork;
     private Positions position;
     private Integer level;

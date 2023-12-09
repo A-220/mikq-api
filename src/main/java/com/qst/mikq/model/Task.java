@@ -1,6 +1,6 @@
 package com.qst.mikq.model;
 
-import com.qst.mikq.enums.Priorities;
+import com.qst.mikq.enums.PrioritiesOfTask;
 import lombok.Builder;
 import lombok.Data;
 
@@ -13,7 +13,7 @@ public class Task {
    private final Long uuid;
    private String name;
    private String description;
-   private Priorities priority;
+   private PrioritiesOfTask priority;
    private final LocalDateTime dateOfCreation;
    private LocalDateTime dateOfDeadLine;
    private Boolean closed;

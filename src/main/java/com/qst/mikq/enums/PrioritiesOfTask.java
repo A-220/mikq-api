@@ -1,6 +1,6 @@
 package com.qst.mikq.enums;
 
-public enum Priorities {
+public enum PrioritiesOfTask {
     IMPORTANT,
     NORMAL,
     COMMON;
