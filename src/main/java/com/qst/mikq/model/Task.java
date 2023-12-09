@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 // TODO: 09.12.2023 valid, documentation
 @Data
 @Builder
-@NotNull(message = "User cannot be null")
+@NotNull(message = "Task cannot be null")
 public class Task {
    private final Long uuid;
    @NotNull(message = "Name cannot be null")
