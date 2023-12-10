@@ -2,9 +2,11 @@ package com.qst.mikq.model;
 
 import com.qst.mikq.annotations.DateOfDeadLine;
 import com.qst.mikq.enums.PrioritiesOfTask;
+
 import javax.validation.constraints.*;
 import lombok.Builder;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
 
 import java.time.LocalDateTime;
 
@@ -13,7 +15,8 @@ import java.time.LocalDateTime;
 @Builder
 @NotNull(message = "Task cannot be null")
 public class Task {
-   private final Long uuid;
+   @Id
+   private final Long id;
    private final Long taskOwnerUuid;
    private final LocalDateTime dateOfCreation;
    @NotNull(message = "Name cannot be null")

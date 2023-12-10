@@ -10,7 +10,7 @@ import lombok.Data;
 @Data
 @Builder
 @NotNull(message = "User cannot be null")
-// TODO: 09.12.2023 validation and context, documentation
+// TODO: 09.12.2023 documentation
 public class User {
     private final Long uuid;
     @NotNull(message = "Login cannot be null")
