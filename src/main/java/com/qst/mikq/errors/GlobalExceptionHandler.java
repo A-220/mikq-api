@@ -28,4 +28,6 @@ public class GlobalExceptionHandler {
         log.error(NOT_FOUND, e.getMessage(), e);
         return new ResponseEntity<>(new ApiError(HttpStatus.NOT_FOUND.value(), e.getMessage()), HttpStatus.NOT_FOUND);
     }
+
+
 }

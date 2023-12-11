@@ -81,7 +81,7 @@ public class TaskControllerService {
     // Вот тут нунжно будет очень хорошо подумать читай Reflection Api в java
     // Тут если что прям страшилка которая в ран тайме получает обьект и меняет его приватные поля без сеттеров лол
     // Уверен можно сделать как то по умному, но это просто прикольно
-    public Task updateTaskPartially(Long id, Map<String, Object> paramsMap) {
+    public Task updateTaskPartially(Long id, Map<String, Object> paramsMap)  {
         if (!mapOfTasks.containsKey(id)) {
             throw new NotFoundException(String.format(TASK_NOT_FOUND, id));
         }
