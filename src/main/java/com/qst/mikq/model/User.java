@@ -49,4 +49,5 @@ public class User {
     @Max(value = 1000, message = "Experience cannot be more than 1000")
     private Double experience;
 
+
 }
