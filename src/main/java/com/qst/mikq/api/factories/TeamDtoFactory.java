@@ -10,6 +10,6 @@ public class TeamDtoFactory {
        return TeamDto.builder()
                .id(teamEntity.getId())
                .name(teamEntity.getName())
-               .build()
+               .build();
    }
 }

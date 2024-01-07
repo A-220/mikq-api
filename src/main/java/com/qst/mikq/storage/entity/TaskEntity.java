@@ -35,7 +35,7 @@ public class TaskEntity {
 
     @ManyToOne
     @JoinColumn(name = "owner_id", referencedColumnName = "id")
-    User ownerId;
+    UserEntity ownerId;
 
     @Enumerated(EnumType.STRING)
     Priority priority;

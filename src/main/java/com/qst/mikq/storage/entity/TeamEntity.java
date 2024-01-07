@@ -27,5 +27,5 @@ public class TeamEntity {
     @Builder.Default
     @OneToMany
     @JoinColumn(name = "team_id", referencedColumnName = "id")
-    List<User> users = new ArrayList<>();
+    List<UserEntity> users = new ArrayList<>();
 }

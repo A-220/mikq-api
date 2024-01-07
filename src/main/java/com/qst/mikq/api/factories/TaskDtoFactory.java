@@ -15,7 +15,7 @@ public class TaskDtoFactory {
                 .createdAt(taskEntity.getCreatedAt())
                 .deadline(taskEntity.getDeadline())
                 .experience(taskEntity.getExperience())
-                .build()
+                .build();
     }
 
 }

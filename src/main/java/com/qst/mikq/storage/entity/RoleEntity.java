@@ -31,5 +31,5 @@ public class RoleEntity {
     @Builder.Default
     @OneToMany
     @JoinColumn(name = "role_id", referencedColumnName = "id")
-    List<User> userWithThisRole = new ArrayList<>();
+    List<UserEntity> userWithThisRole = new ArrayList<>();
 }
