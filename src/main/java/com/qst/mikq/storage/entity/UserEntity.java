@@ -15,7 +15,7 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -35,6 +35,6 @@ public class User {
     @Builder.Default
     @OneToMany
     @JoinColumn(name = "user_id", referencedColumnName = "id")
-    List<Task> userTasks = new ArrayList<>();
+    List<TaskEntity> userTasks = new ArrayList<>();
 
 }
